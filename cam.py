@@ -28,6 +28,13 @@ class secureMe:
             c.imshow('capturing',frame)
             if c.waitKey(1) & 0xFF==ord('q'):
                 break
+            print(self.isLocked())
+            if self.isLocked()==True and self.cap!=None:
+                pass
+            elif (self.isLocked()==False and self.cap!=None):
+                pass
+            elif (self.isLocked()==True):
+                self.webone()
         self.cap.release()
         self.out.release()
         c.destroyAllWindows()
